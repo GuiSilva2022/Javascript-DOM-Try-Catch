@@ -13,17 +13,21 @@ function clickFileButton(){
 function clicknumbButton(){
 
         numb = document.getElementById("inputnumb").value
+        document.getElementById("outputnumb").innerHTML = "";
     
         try{
             if (numb == '') throw 'Informe um valor';
-            if (numb<5) throw 'Informe um valor maior que 5 e menor que 10'
-            if (numb>10) throw 'Informe um valor maior que 5 e menor que 10'
+            
+            if (numb<=5 || numb>=10) throw 'Informe um valor maior que 5 e menor que 10'
+            // if (IsNaN)
         }
         catch(erro){
             document.getElementById("outputnumb").innerHTML = erro;
+            console.log("Erro" + erro)
         }
         finally{
-        alert("O número escolhido foi  " + numb);
+        alert("O numero escolhido foi  " + numb);
+        numb = document.getElementById("inputnumb").value = ""
     }
         console.log(numb)
     }
