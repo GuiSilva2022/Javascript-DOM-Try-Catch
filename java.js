@@ -1,14 +1,5 @@
-const inputFileButton = document.getElementById("inputfilebutton");
-inputFileButton.addEventListener("click", clickFileButton);
-
 const inputnumbButton = document.getElementById("inputnumbbutton");
 inputnumbButton.addEventListener("click", clicknumbButton);
-
-function clickFileButton(){
-    arquivo = document.getElementById("inputfile");
-
-    var fr=new FileReader();
-    }
 
 function clicknumbButton(){
 
@@ -16,10 +7,12 @@ function clicknumbButton(){
         document.getElementById("outputnumb").innerHTML = "";
     
         try{
-            if (numb == '') throw 'Informe um valor';
+            if (numb == '') throw '  𝙀𝙧𝙧𝙖𝙙𝙤';
+            if (numb == 'SDFLHQWH') throw ' 𝘼 𝙨𝙚𝙣𝙝𝙖 𝒑𝒂𝒓𝒂 𝒔𝒂𝒊𝒓 𝒅𝒂 𝒔𝒂𝒍𝒂 𝒆́: "𝙢𝙚𝙣𝙩𝙚𝙨 𝙚𝙡𝙚𝙩𝙧𝙞𝙯𝙖𝙙𝙖𝙨"';
+    else{
+        throw ' 𝙀𝙧𝙧𝙖𝙙𝙤';
+    }
             
-            if (numb<=5 || numb>=10) throw 'Informe um valor maior que 5 e menor que 10'
-            // if (IsNaN)
         }
         catch(erro){
             document.getElementById("outputnumb").innerHTML = erro;
